@@ -1,0 +1,3 @@
+requests==2.26.0 #es para hacer las peticiones a la API
+pytest==6.2.4 #el runner de los test
+assertpy==1.1 #es para comparar y verificar los resultados
