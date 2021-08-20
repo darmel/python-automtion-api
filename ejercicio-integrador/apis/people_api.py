@@ -29,3 +29,18 @@ class PeopleApi:
         response = requests.post(url=self.base_url, data=payload, headers=headers)
         return response
 
+    def delete_person_by_id(self, id):
+        self.id = str(id)
+        headers = {'Content-Type':'application/json',
+                'Accept':'application/json'}
+        response = requests.delete(url=self.base_url+'/'+self.id, headers=headers)
+        return response
+
+    def update_person_by_id(self, id, payload):
+        self.id = str(id)
+        headers = {'Content-Type':'application/json',
+                'Accept':'application/json'}
+        response = requests.put(url=self.base_url+'/'+self.id, data=payload, headers=headers)
+        return response
+
+
